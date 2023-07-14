@@ -5,6 +5,7 @@ body{
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
+    display: flex;
 }
 .app{
     background-color: bisque;
@@ -15,6 +16,7 @@ body{
     font-weight: 100;
     border: 10px;
     align-items: center;
+    justify-items: center;
 }
 .btn{
     background-color: aquamarine;
@@ -35,6 +37,7 @@ body{
     font-size: larger;
     width: 50%;
     display: block;
+    justify-items: center;
     cursor: pointer;
     border: 0;
 }
