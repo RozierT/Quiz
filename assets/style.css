@@ -5,7 +5,7 @@ body{
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
-    display: flex;
+    display: flexbox;
 }
 .app{
     background-color: bisque;
@@ -17,6 +17,7 @@ body{
     border: 10px;
     align-items: center;
     justify-items: center;
+    display: flexbox;
 }
 .btn{
     background-color: aquamarine;
@@ -36,24 +37,53 @@ body{
     font-weight: bold;
     font-size: larger;
     width: 50%;
-    display: block;
+    display: flex;
     justify-items: center;
     cursor: pointer;
     border: 0;
+    justify-self: center;
+    justify-content: center;
+    margin-left: 25%;
 }
 .btn:hover{
     background-color: rgb(42, 83, 69);
-    color: red;
+    color: rgb(241, 241, 10);
 }
 #next:hover{
     background-color: rgb(42, 83, 69);
-    color: red;
+    color: rgb(0, 255, 153);
+}
+
+.correct{
+    background-color: green;
+}
+
+.incorrect{
+    background-color: red;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
 }
 
 h2{
     margin-top: 10px;
-    display: block;
-}
-h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
+}
+.highscore{
+    color: aqua;
+    margin: 15px;
+}
+
+#score{
+    color: aqua;
+    margin: 15px;
+    justify-content: center;
+    justify-self: center;
+    font-weight: bold;
+    display: flex;
 }
