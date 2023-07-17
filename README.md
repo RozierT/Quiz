@@ -1,6 +1,4 @@
 # Quiz
-For UCD Coding Bootcamp challenge
-# Creating a quiz
 
 ## Description
 
@@ -8,11 +6,16 @@ For UCD Coding Bootcamp challenge
 - This website can be used to quiz yourself on important topics covered in class
 - This focuses on manipulating the DOM via javascript
 
+
+# Screenshot of the application
+ <a href="assets/pictures/QuizChallenge.png"></a>
+
+# Below are the instructions given for this challenge
+# Creating a quiz
+
 ## Usage
 
-Use this quiz by visting this url: 
-
-![alt text](assets/images/screenshot.png)
+Use this quiz by visting this url: roziert.github.io/Quiz/
 
 ## License
 
