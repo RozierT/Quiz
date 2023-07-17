@@ -106,7 +106,7 @@ function resetState(){
     }
 }
 
-var timeLeft = 10;
+var timeLeft = 30;
 var timeEl = document.querySelector(".time");
 
 // Timer that counts down from 30
