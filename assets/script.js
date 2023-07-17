@@ -37,7 +37,7 @@ var questions = [
                 ]
     },
     {
-        question: "Inside which HTMl element do we put the JavaScript?",
+        question: "Inside which HTML element do we put the JavaScript?",
         answers: [
                     {text:"js", correct:false},
                     {text:"scripting", correct:false},
@@ -62,7 +62,7 @@ function startQuiz(){
     countdown();
     showQuestion();
 }
-
+// add show question function
 function showQuestion(){
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
@@ -78,7 +78,7 @@ function showQuestion(){
    
 }
 var lastAnswer = document.getElementById("last-answer");
-
+//add event listener to answers
 answers.addEventListener("click", function(event){
     event.preventDefault();
     var selection = event.target
@@ -86,12 +86,12 @@ answers.addEventListener("click", function(event){
     console.log(selection);
     if(selection.dataset.correct=true){
         lastAnswer.innerHTML = "Correct!";
-        timeLeft+10;
+        timeLeft+5;
         var userScore = score++;
     }
     else{
         lastAnswer.innerHTML = "Wrong!";
-        timeLeft-10;
+        timeLeft-5;
     }
     showQuestion();
     scoreEl.innerHTML= ("Your Score: "+ userScore);
@@ -106,6 +106,7 @@ function resetState(){
     }
 }
 
+//add timer
 var timeLeft = 30;
 var timeEl = document.querySelector(".time");
 
@@ -135,10 +136,22 @@ function countdown() {
     }, 1000);
   }
 function displayResults(){
- window.prompt("Enter your initials to record your score!");
+ var user = window.prompt("Enter your initials to record your score!");
+ questionEl.innerHTML = "You completed the quiz!";
+ answers.innerHTML = "Way to go!";
+ lastAnswer.innerHTML = " ";
+// record the users score in local storage
+localStorage.setItem("User", user);
+localStorage.setItem("Score",userScore);
 }
 
+//be able to click the high score link to see recent high scores
+function viewHighScores(){
+    var finalScore = localStorage.getItem("User","Score");
+    lastAnswer.innerHTML= finalScore;
+}
 
+//call quiz function
 startQuiz();
 
 
